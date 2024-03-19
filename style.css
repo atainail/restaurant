@@ -2,6 +2,8 @@ html {
     /* margin: 0; */
     width: 100vw; 
     /* margin: auto;    */
+    /* background-color: blueviolet; */
+    overflow-x: hidden;
 }
 
 body {
@@ -47,6 +49,10 @@ header {
 
 }
 
+.restaurant-name {
+    padding: 0 1.2em;
+}
+
 .restaurant-name, .food-title {
     text-align: center;
     font-family: Helvetica;
@@ -79,6 +85,8 @@ header {
     /* text-align: center; */
     padding: 4em 0;
     width: 95%;
+
+    /* background-color: aqua; */
 
 }
 
@@ -158,12 +166,13 @@ span:hover {
     font-size: 30px;
     border-bottom: 5px dotted #000;
     width: 70%;
+    letter-spacing: 2px;
 }
 
 .food-item {
     display: flex;
-    border-top: 2px solid rgb(218, 176, 122);
-    border-bottom: 2px solid rgb(218, 176, 122);
+    border-top: 1px solid rgb(218, 176, 122);
+    border-bottom: 1px solid rgb(218, 176, 122);
     padding: 10px;
     
 }
@@ -171,6 +180,7 @@ span:hover {
 .food-pic img {
     width: 150px;
     height: 150px;
+    margin: auto;
 }
 
 .food-description {
@@ -182,6 +192,7 @@ span:hover {
     font-size: 18px;
     font-weight: 900;
     padding-bottom: 10px;
+    text-align: center;
 }
 
 .food-price, .food-qty {
@@ -196,5 +207,45 @@ span:hover {
 
 .bi-plus-circle, .bi-dash-circle {
     padding: 0 5px;
+    font-size: 1.2em;
 }
+
+footer {
+    text-align: center;
+    width: 100%;
+    /* background-color: rgb(218, 176, 122); */
+    margin: auto;
+    margin-bottom: 9em;
+}
+
+.group-title {
+    margin-bottom: 2em;
+    font-size: 1.2em;
+    font-family: Helvetica;
+    font-weight: 900;
+}
+
+.address div {
+    margin-bottom: 1.2em;
+}
+
+.socials {
+    display: flex;
+    margin: 40px;
+}
+
+.socials i {
+    /* padding: 0 5px; */
+    font-size: 2em;
+    flex: auto;
+    
+}
+
+.credits {
+    
+}
+.credits div{
+    margin-bottom: 15px;
+}
+
 
