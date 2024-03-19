@@ -1,0 +1,200 @@
+html {
+    /* margin: 0; */
+    width: 100vw; 
+    /* margin: auto;    */
+}
+
+body {
+    background-color: antiquewhite;
+    width: 92vw;
+    margin: auto;
+    max-width: 800px;
+
+}
+
+header {
+ 
+    
+    
+}
+
+.content {
+
+
+
+      
+}
+
+.menu {
+    display: flex;
+    
+    margin: auto;
+    font-size: 2em;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    /* background-color: blue; */
+    padding: 20px 0 0 0;
+    /* width: 100%; */
+}
+
+.bar, .restaurant-name, .search, .cart {
+    flex: auto;
+}
+
+.bar {
+    padding-left: .5em;
+
+    margin: auto;
+
+}
+
+.restaurant-name, .food-title {
+    text-align: center;
+    font-family: Helvetica;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+/* .search {
+    text-align: right;
+    padding-right: .5em;
+    font-size: .8em;
+    margin: auto;
+} */
+
+.cart {
+    text-align: right;
+    padding-right: .5em;
+    font-size: .8em;
+    margin: auto;
+}
+
+
+
+.middle-stuff {
+    /* display: flex;
+    flex-direction: column; */
+    /* display: block; */
+    margin: auto;
+    /* align-items: center; */
+    /* text-align: center; */
+    padding: 4em 0;
+    width: 95%;
+
+}
+
+.restaurant-pic {
+    margin: auto;
+    /* width: 100%; */
+    
+}
+
+.restaurant-pic img{
+    width: 100%;
+}
+
+
+
+.food-category {
+    display: flex;  
+   
+    padding: 2em 0;
+    /* max-width: 20vw; */
+    margin: auto;
+}
+
+
+
+.breakfast, .dinner, .dessert {
+    flex: auto;
+
+    margin: auto;
+    display: flex;
+}
+
+.breakfast img, .dinner img, .dessert img {
+    flex: auto;   
+    width: 15%; 
+    max-width: 300px;  
+    height: 10%;
+    max-height: 300px;
+    /* min-width: 5em; */
+    padding: 5px 10px;
+    margin: auto;
+    
+}
+
+.breakfast img:hover, .dinner img:hover, .dessert img:hover {
+    opacity: .5;
+}
+
+/* .breakfast img:hover + span, .dinner img:hover + span, .dessert img:hover + span{
+    display: block;
+} */
+
+span {   
+    position: absolute; 
+    margin: 2em;
+    
+   
+
+   width: 200px;
+   max-width: 200px;
+   height: 120px;
+   max-height: 120px;
+   /* display: none; */
+}
+
+span:hover {
+    display: block;
+    /* background-color: blue; */
+    
+}
+
+.food-title {
+    margin: auto;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    font-size: 30px;
+    border-bottom: 5px dotted #000;
+    width: 70%;
+}
+
+.food-item {
+    display: flex;
+    border-top: 2px solid rgb(218, 176, 122);
+    border-bottom: 2px solid rgb(218, 176, 122);
+    padding: 10px;
+    
+}
+
+.food-pic img {
+    width: 150px;
+    height: 150px;
+}
+
+.food-description {
+    padding: 5px 20px;
+    margin: auto;
+}
+
+.food-name {
+    font-size: 18px;
+    font-weight: 900;
+    padding-bottom: 10px;
+}
+
+.food-price, .food-qty {
+    margin: auto;
+    text-align: center;
+}
+
+.food-qty {
+    display: flex;
+    padding: 10px 0;
+}
+
+.bi-plus-circle, .bi-dash-circle {
+    padding: 0 5px;
+}
+
