@@ -84,7 +84,7 @@ var biscuitQty = document.querySelector(".biscuit-qty");
 var biscuitCount = 0;
 foodChanges(biscuitPlus, biscuitMinus, biscuitCount, biscuitQty);
 
-console.log(document.cookie);
-document.cookie = "key" + "=" + "value";
+console.log(navigator.cookieEnabled);
+document.cookie = "name=bob;";
 console.log(document.cookie);
 
