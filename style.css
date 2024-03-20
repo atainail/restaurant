@@ -1,6 +1,8 @@
 html {
-    /* margin: 0; */
+    margin: 0;
+    padding: 0;
     width: 100vw; 
+    max-width: 100vw;
     /* margin: auto;    */
     /* background-color: blueviolet; */
     overflow-x: hidden;
@@ -11,7 +13,7 @@ body {
     width: 92vw;
     margin: auto;
     max-width: 800px;
-
+    position: relative;
 }
 
 header {
