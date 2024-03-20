@@ -74,6 +74,23 @@ header {
     padding-right: .5em;
     font-size: .8em;
     margin: auto;
+    /* background-color: aqua; */
+}
+
+.cart-qty {
+    background-color: red;
+    color: white;
+    text-align: center;
+    border-radius: 90%;
+    font-size: 18px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    /* left: 60%; */
+    
+    right: 0%;
+    margin-top: -.3em;
+
 }
 
 
@@ -141,7 +158,8 @@ header {
     display: block;
 } */
 
-span {   
+
+span.category {   
     position: absolute; 
     margin: 2em;
     
