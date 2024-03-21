@@ -249,6 +249,8 @@ $(document).ready(function(){
 
     totalsDiv.style.display = "block";
     
+    console.log(`egg qty is ${eggsQty.innerHTML}`)
+
     });
 });
 
