@@ -212,62 +212,62 @@ cartIcon.addEventListener("click", function(){
 });
 
 
-$(document).ready(function(){
-    $(".bi-cart").click(function(){
-      $(".middle-stuff").load("cart.txt").hide().fadeIn('slow');
-      $(".totals").fadeIn('slow');
-    cartIcon.style.display = "none";
-    houseIcon.style.display = "block";
-    cartQty.style.display = "none";
-    totalsDiv.style.display = "block";
+// $(document).ready(function(){
+//     $(".bi-cart").click(function(){
+//       $(".middle-stuff").load("cart.txt").hide().fadeIn('slow');
+//       $(".totals").fadeIn('slow');
+//     cartIcon.style.display = "none";
+//     houseIcon.style.display = "block";
+//     cartQty.style.display = "none";
+//     totalsDiv.style.display = "block";
 
 
-    if(eggsQty.innerHTML == 0 ){
-        eggsDiv.style.display = "none";
-        $(".eggs-item").hide();
-    }
+//     if(eggsQty.innerHTML == 0 ){
+//         eggsDiv.style.display = "none";
+//         $(".eggs-item").hide();
+//     }
 
 
 
-    if(pancakesQty.innerHTML == 0 ){
-        pancakesDiv.style.display = "none";
-        $(".pancakes-item").hide();
-    }
-    if(biscuitQty.innerHTML == 0 ){
-        biscuitDiv.style.display = "none";
-        $(".biscuit-item").hide();
-    }
-    if(burgerQty.innerHTML == 0 ){
-        burgerDiv.style.display = "none";
-        $(".burger-item").hide();
-    }
-    if(steakQty.innerHTML == 0 ){
-        steakDiv.style.display = "none";
-        $(".steak-item").hide();
-    }
-    if(salmonQty.innerHTML == 0 ){
-        salmonDiv.style.display = "none";
-        $(".salmon-item").hide();
-    }
-    if(cakeQty.innerHTML == 0 ){
-        cakeDiv.style.display = "none";
-        $(".cake-item").hide();
-    }
-    if(macaroonsQty.innerHTML == 0 ){
-        macaroonsDiv.style.display = "none";
-        $(".macaroons-item").hide();
-    }
+//     if(pancakesQty.innerHTML == 0 ){
+//         pancakesDiv.style.display = "none";
+//         $(".pancakes-item").hide();
+//     }
+//     if(biscuitQty.innerHTML == 0 ){
+//         biscuitDiv.style.display = "none";
+//         $(".biscuit-item").hide();
+//     }
+//     if(burgerQty.innerHTML == 0 ){
+//         burgerDiv.style.display = "none";
+//         $(".burger-item").hide();
+//     }
+//     if(steakQty.innerHTML == 0 ){
+//         steakDiv.style.display = "none";
+//         $(".steak-item").hide();
+//     }
+//     if(salmonQty.innerHTML == 0 ){
+//         salmonDiv.style.display = "none";
+//         $(".salmon-item").hide();
+//     }
+//     if(cakeQty.innerHTML == 0 ){
+//         cakeDiv.style.display = "none";
+//         $(".cake-item").hide();
+//     }
+//     if(macaroonsQty.innerHTML == 0 ){
+//         macaroonsDiv.style.display = "none";
+//         $(".macaroons-item").hide();
+//     }
 
-    netPriceDiv.innerHTML = netPrice.toFixed(2);
-    taxesDiv.innerHTML = taxes;
-    totalPriceDiv.innerHTML = totalPrice;
+//     netPriceDiv.innerHTML = netPrice.toFixed(2);
+//     taxesDiv.innerHTML = taxes;
+//     totalPriceDiv.innerHTML = totalPrice;
 
-    totalsDiv.style.display = "block";
+//     totalsDiv.style.display = "block";
     
-    console.log(`egg qty is ${eggsQty.innerHTML}`)
+//     console.log(`egg qty is ${eggsQty.innerHTML}`)
 
-    });
-});
+//     });
+// });
 
 
 
