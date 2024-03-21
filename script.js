@@ -215,7 +215,7 @@ cartIcon.addEventListener("click", function(){
 $(document).ready(function(){
     $(".bi-cart").click(function(){
       $(".middle-stuff").load("cart.txt").hide().fadeIn('slow');
-
+      $(".totals").fadeIn('slow');
     cartIcon.style.display = "none";
     houseIcon.style.display = "block";
     cartQty.style.display = "none";
