@@ -78,6 +78,10 @@ header {
     /* background-color: aqua; */
 }
 
+.bi-house-door {
+    display: none;
+}
+
 .cart-qty {
     background-color: red;
     color: white;
@@ -235,6 +239,24 @@ span:hover {
 
 .bi-plus-circle:hover, .bi-dash-circle:hover {
     cursor: pointer;
+}
+
+.totals {
+
+    margin: 5em auto;
+    /* margin: auto;     */
+    width: 50%;
+    text-transform: uppercase;
+    font-family: Helvetica;
+    font-weight: 900;
+}
+
+.totals span {
+    float: right;
+}
+
+.totals div {
+    margin-bottom: 1.2em;
 }
 
 
