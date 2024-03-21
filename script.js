@@ -198,6 +198,8 @@ cartIcon.addEventListener("click", function(){
     netPriceDiv.innerHTML = netPrice;
     taxesDiv.innerHTML = taxes;
     totalPriceDiv.innerHTML = totalPrice;
+
+    totalsDiv.style.display = "block";
 });
 
 $(document).ready(function(){
