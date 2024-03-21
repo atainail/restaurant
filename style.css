@@ -242,7 +242,7 @@ span:hover {
 }
 
 .totals {
-    display: none;
+    /* display: none; */
     margin: 5em auto;
     /* margin: auto;     */
     width: 50%;

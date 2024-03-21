@@ -162,9 +162,9 @@ document.addEventListener("click", function(){
     burgerQty.innerHTML*9.99 + steakQty.innerHTML*12.99 + salmonQty.innerHTML*15.99 + 
     cakeQty.innerHTML*7.99 + macaroonsQty.innerHTML*9.99
 
-    taxes = netPrice * .07;
-    totalPrice = netPrice + taxes;
-    console.log()
+    taxes = (netPrice * .07).toFixed(2);;
+    totalPrice = (Math.floor(netPrice) + Math.floor(taxes)).toFixed(2);
+    
     
 });
 
@@ -217,6 +217,7 @@ $(document).ready(function(){
     houseIcon.style.display = "block";
     cartQty.style.display = "none";
     totalsDiv.style.display = "block";
+
 
     if(eggsQty.innerHTML == 0 ){
         eggsDiv.style.display = "none";
