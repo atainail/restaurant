@@ -85,6 +85,6 @@ var biscuitCount = 0;
 foodChanges(biscuitPlus, biscuitMinus, biscuitCount, biscuitQty);
 
 console.log(navigator.cookieEnabled);
-document.cookie = "name=bob;";
+document.cookie = "name=bob; path=/";
 console.log(document.cookie);
 
