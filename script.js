@@ -164,10 +164,49 @@ document.addEventListener("click", function(){
 
 
 
-cartIcon.addEventListener("click", function(){  
+// cartIcon.addEventListener("click", function(){  
     
 
-    cartIcon.style.display = "none";
+//     cartIcon.style.display = "none";
+//     houseIcon.style.display = "block";
+
+//     if(eggsCount == 0 ){
+//         eggsDiv.style.display = "none";
+//     }
+//     if(pancakesCount == 0 ){
+//         pancakesDiv.style.display = "none";
+//     }
+//     if(biscuitCount == 0 ){
+//         biscuitDiv.style.display = "none";
+//     }
+//     if(burgerCount == 0 ){
+//         burgerDiv.style.display = "none";
+//     }
+//     if(steakCount == 0 ){
+//         steakDiv.style.display = "none";
+//     }
+//     if(salmonCount == 0 ){
+//         salmonDiv.style.display = "none";
+//     }
+//     if(cakeCount == 0 ){
+//         cakeDiv.style.display = "none";
+//     }
+//     if(macaroonsCount == 0 ){
+//         macaroonsDiv.style.display = "none";
+//     }
+
+//     netPriceDiv.innerHTML = netPrice;
+//     taxesDiv.innerHTML = taxes;
+//     totalPriceDiv.innerHTML = totalPrice;
+
+//     totalsDiv.style.display = "block";
+// });
+
+$(document).ready(function(){
+    $(".bi-cart").click(function(){
+      $(".middle-stuff").load("cart.txt").hide().fadeIn('slow');
+
+      cartIcon.style.display = "none";
     houseIcon.style.display = "block";
 
     if(eggsCount == 0 ){
@@ -200,11 +239,6 @@ cartIcon.addEventListener("click", function(){
     totalPriceDiv.innerHTML = totalPrice;
 
     totalsDiv.style.display = "block";
-});
-
-$(document).ready(function(){
-    $(".bi-cart").click(function(){
-      $(".middle-stuff").load("cart.txt").hide().fadeIn('slow');
     });
 });
 

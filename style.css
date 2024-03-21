@@ -237,7 +237,7 @@ span:hover {
     font-size: 1.2em;
 }
 
-.bi-plus-circle:hover, .bi-dash-circle:hover {
+.bi-plus-circle:hover, .bi-dash-circle:hover, .bi-cart:hover, .bi-house-door:hover {
     cursor: pointer;
 }
 
