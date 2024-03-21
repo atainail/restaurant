@@ -125,7 +125,13 @@ header {
     width: 100%;
 }
 
-
+.empty-cart {
+    font-family: helvetica;
+    font-weight: 900;
+    font-size: 2em;
+    text-align: center;
+    /* display: none; */
+}
 
 .food-category {
     display: flex;  

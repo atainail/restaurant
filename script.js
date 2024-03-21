@@ -153,7 +153,7 @@ var netPriceDiv = document.querySelector(".net-price");
 var taxesDiv = document.querySelector(".taxes");
 var totalPriceDiv = document.querySelector(".total-price");
 
-var netPrice;
+var netPrice = 0;
 var taxes;
 var totalPrice;
 
@@ -169,15 +169,33 @@ document.addEventListener("click", function(){
     taxesDiv.innerHTML = taxes;
     totalPriceDiv.innerHTML = totalPrice;
     
+    if(cartCount == 0){
+        emptyCart.innerHTML = "Your cart is empty";         
+   } else {
+        emptyCart.innerHTML = " ";
+   }
 });
 
+var foodTitle = document.querySelectorAll(".food-title");
+var foodCategory = document.querySelector(".food-category");
+var restaurantPic = document.querySelector(".restaurant-pic");
+var emptyCart = document.querySelector(".empty-cart");
 
 
-cartIcon.addEventListener("click", function(){  
-    
-
+cartIcon.addEventListener("click", function(){    
+    cartQty.style.display = "none";
+    totalsDiv.style.display = "block";
     cartIcon.style.display = "none";
     houseIcon.style.display = "block";
+    foodTitle[0].style.display = "none";
+    foodTitle[1].style.display = "none";
+    foodTitle[2].style.display = "none";
+    foodCategory.style.display = "none";
+    restaurantPic.style.display = "none";
+
+    if(cartCount == 0){
+         emptyCart.innerHTML = "Your cart is empty";         
+    }
 
     if(eggsQty.innerHTML == 0 ){
         eggsDiv.style.display = "none";
@@ -207,8 +225,6 @@ cartIcon.addEventListener("click", function(){
     netPriceDiv.innerHTML = netPrice.toFixed(2);
     taxesDiv.innerHTML = taxes;
     totalPriceDiv.innerHTML = totalPrice;
-
-    totalsDiv.style.display = "block";
 });
 
 
@@ -283,4 +299,48 @@ $(document).ready(function(){
 
     });
 });
+
+houseIcon.addEventListener("click", function(){    
+    cartQty.style.display = "block";
+    totalsDiv.style.display = "none";
+    cartIcon.style.display = "block";
+    houseIcon.style.display = "none";
+    foodTitle[0].style.display = "block";
+    foodTitle[1].style.display = "block";
+    foodTitle[2].style.display = "block";
+    foodCategory.style.display = "flex";
+    restaurantPic.style.display = "block";
+
+    
+
+    
+        eggsDiv.style.display = "flex";
+    
+    
+        pancakesDiv.style.display = "flex";
+    
+    
+        biscuitDiv.style.display = "flex";
+    
+    
+        burgerDiv.style.display = "flex";
+    
+    
+        steakDiv.style.display = "flex";
+    
+
+        salmonDiv.style.display = "flex";
+    
+    
+        cakeDiv.style.display = "flex";
+  
+  
+        macaroonsDiv.style.display = "flex";
+  
+
+    netPriceDiv.innerHTML = netPrice.toFixed(2);
+    taxesDiv.innerHTML = taxes;
+    totalPriceDiv.innerHTML = totalPrice;
+});
+
 
