@@ -202,12 +202,14 @@ document.addEventListener("click", function(){
 //     totalsDiv.style.display = "block";
 // });
 
+
 $(document).ready(function(){
     $(".bi-cart").click(function(){
       $(".middle-stuff").load("cart.txt").hide().fadeIn('slow');
 
-      cartIcon.style.display = "none";
+    cartIcon.style.display = "none";
     houseIcon.style.display = "block";
+    cartQty.style.display = "none";
 
     if(eggsCount == 0 ){
         eggsDiv.style.display = "none";
@@ -247,9 +249,11 @@ $(document).ready(function(){
       $(".middle-stuff").load("index.txt").hide().fadeIn('slow');
 
     cartIcon.style.display = "block";
+    cartQty.style.display = "block";
     houseIcon.style.display = "none";
-
     totalsDiv.style.display = "none";
+    
+
     });
 });
 
