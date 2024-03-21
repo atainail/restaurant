@@ -160,6 +160,8 @@ document.addEventListener("click", function(){
     netPrice = eggsCount*3.99 + pancakesCount*5.99 + biscuitCount*2.99 + burgerCount*9.99 + steakCount*12.99 + salmonCount*15.99 + cakeCount*7.99 + macaroonsCount*9.99
     taxes = netPrice * .07;
     totalPrice = netPrice + taxes;
+
+    console.log("eggcount = " + eggsCount)
 });
 
 
@@ -241,8 +243,11 @@ $(document).ready(function(){
     totalPriceDiv.innerHTML = totalPrice;
 
     
+    
     });
 });
+
+
 
 $(document).ready(function(){
     $(".bi-house-door").click(function(){
