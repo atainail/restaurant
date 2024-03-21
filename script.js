@@ -44,6 +44,7 @@ function foodChanges(foodPlus, foodMinus, foodCount, foodQty){
             cartCount++; 
             cartQty.innerHTML = cartCount;   
             cartQty.style.display = "block";
+            
         }  
     });
     foodMinus.addEventListener("click", function(){
@@ -160,8 +161,8 @@ document.addEventListener("click", function(){
     netPrice = eggsCount*3.99 + pancakesCount*5.99 + biscuitCount*2.99 + burgerCount*9.99 + steakCount*12.99 + salmonCount*15.99 + cakeCount*7.99 + macaroonsCount*9.99
     taxes = netPrice * .07;
     totalPrice = netPrice + taxes;
-
-    console.log("eggcount = " + eggsCount)
+    console.log()
+    
 });
 
 
@@ -172,28 +173,28 @@ cartIcon.addEventListener("click", function(){
     cartIcon.style.display = "none";
     houseIcon.style.display = "block";
 
-    if(eggsCount == 0 ){
+    if(eggsQty.innerHTML == 0 ){
         eggsDiv.style.display = "none";
     }
-    if(pancakesCount == 0 ){
+    if(pancakesQty.innerHTML == 0 ){
         pancakesDiv.style.display = "none";
     }
-    if(biscuitCount == 0 ){
+    if(biscuitQty.innerHTML == 0 ){
         biscuitDiv.style.display = "none";
     }
-    if(burgerCount == 0 ){
+    if(burgerQty.innerHTML == 0 ){
         burgerDiv.style.display = "none";
     }
-    if(steakCount == 0 ){
+    if(steakQty.innerHTML == 0 ){
         steakDiv.style.display = "none";
     }
-    if(salmonCount == 0 ){
+    if(salmonQty.innerHTML == 0 ){
         salmonDiv.style.display = "none";
     }
-    if(cakeCount == 0 ){
+    if(cakeQty.innerHTML == 0 ){
         cakeDiv.style.display = "none";
     }
-    if(macaroonsCount == 0 ){
+    if(macaroonsQty.innerHTML == 0 ){
         macaroonsDiv.style.display = "none";
     }
 
