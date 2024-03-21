@@ -162,9 +162,12 @@ document.addEventListener("click", function(){
     burgerQty.innerHTML*9.99 + steakQty.innerHTML*12.99 + salmonQty.innerHTML*15.99 + 
     cakeQty.innerHTML*7.99 + macaroonsQty.innerHTML*9.99
 
-    taxes = (netPrice * .07).toFixed(2);;
-    totalPrice = (Math.floor(netPrice) + Math.floor(taxes)).toFixed(2);
+    taxes = (netPrice * .07).toFixed(2);
+    totalPrice = (parseFloat(netPrice) + parseFloat(taxes)).toFixed(2);
     
+    netPriceDiv.innerHTML = netPrice.toFixed(2);
+    taxesDiv.innerHTML = taxes;
+    totalPriceDiv.innerHTML = totalPrice;
     
 });
 
@@ -201,7 +204,7 @@ cartIcon.addEventListener("click", function(){
         macaroonsDiv.style.display = "none";
     }
 
-    netPriceDiv.innerHTML = netPrice;
+    netPriceDiv.innerHTML = netPrice.toFixed(2);
     taxesDiv.innerHTML = taxes;
     totalPriceDiv.innerHTML = totalPrice;
 
@@ -221,30 +224,41 @@ $(document).ready(function(){
 
     if(eggsQty.innerHTML == 0 ){
         eggsDiv.style.display = "none";
+        $(".eggs-item").hide();
     }
+
+
+
     if(pancakesQty.innerHTML == 0 ){
         pancakesDiv.style.display = "none";
+        $(".pancakes-item").hide();
     }
     if(biscuitQty.innerHTML == 0 ){
         biscuitDiv.style.display = "none";
+        $(".biscuit-item").hide();
     }
     if(burgerQty.innerHTML == 0 ){
         burgerDiv.style.display = "none";
+        $(".burger-item").hide();
     }
     if(steakQty.innerHTML == 0 ){
         steakDiv.style.display = "none";
+        $(".steak-item").hide();
     }
     if(salmonQty.innerHTML == 0 ){
         salmonDiv.style.display = "none";
+        $(".salmon-item").hide();
     }
     if(cakeQty.innerHTML == 0 ){
         cakeDiv.style.display = "none";
+        $(".cake-item").hide();
     }
     if(macaroonsQty.innerHTML == 0 ){
         macaroonsDiv.style.display = "none";
+        $(".macaroons-item").hide();
     }
 
-    netPriceDiv.innerHTML = netPrice;
+    netPriceDiv.innerHTML = netPrice.toFixed(2);
     taxesDiv.innerHTML = taxes;
     totalPriceDiv.innerHTML = totalPrice;
 
