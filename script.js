@@ -242,3 +242,14 @@ $(document).ready(function(){
     });
 });
 
+$(document).ready(function(){
+    $(".bi-house-door").click(function(){
+      $(".middle-stuff").load("index.txt").hide().fadeIn('slow');
+
+    cartIcon.style.display = "block";
+    houseIcon.style.display = "none";
+
+    totalsDiv.style.display = "none";
+    });
+});
+
