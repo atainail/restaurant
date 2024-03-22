@@ -168,6 +168,7 @@ var totalPriceDiv = document.querySelector(".total-price");
 var netPrice = 0;
 var taxes;
 var totalPrice;
+var checkOutDiv = document.querySelector(".check-out");
 
 document.addEventListener("click", function(){
     netPrice = eggsQty.innerHTML*3.99 + pancakesQty.innerHTML*5.99 + biscuitQty.innerHTML*2.99 + 
@@ -181,11 +182,8 @@ document.addEventListener("click", function(){
     taxesDiv.innerHTML = taxes;
     totalPriceDiv.innerHTML = totalPrice;
     
-    if(cartCount == 0){
-        emptyCart.innerHTML = "Your cart is empty";         
-   } else {
-        emptyCart.innerHTML = " ";
-   }
+
+
 });
 
 var foodTitle = document.querySelectorAll(".food-title");
@@ -193,6 +191,78 @@ var foodCategory = document.querySelector(".food-category");
 var restaurantPic = document.querySelector(".restaurant-pic");
 var emptyCart = document.querySelector(".empty-cart");
 var buyDiv = document.querySelector(".buy-now");
+
+var minusIcon = document.querySelectorAll(".bi-dash-circle");
+var plusIcon = document.querySelectorAll(".bi-plus-circle");
+
+
+for(var i = 0; i < plusIcon.length; i++){
+    minusIcon[i].addEventListener("click", function(){
+        if(cartCount == 0){
+            emptyCart.innerHTML = "Your cart is empty"; 
+            checkOutDiv.style.display = "none";
+            
+       } 
+    });
+    
+    plusIcon[i].addEventListener("click", function(){
+        if(cartCount > 0){
+            emptyCart.innerHTML = " ";
+            checkOutDiv.style.display = "block";
+            
+        }
+    });
+}
+
+
+
+checkOutDiv.addEventListener("click", function(){
+    checkOutDiv.style.display = "none";
+    cartQty.style.display = "none";
+    totalsDiv.style.display = "block";
+    cartIcon.style.display = "none";
+    houseIcon.style.display = "block";
+    foodTitle[0].style.display = "none";
+    foodTitle[1].style.display = "none";
+    foodTitle[2].style.display = "none";
+    foodCategory.style.display = "none";
+    restaurantPic.style.display = "none";
+    buyDiv.style.display = "block";
+
+    if(cartCount == 0){
+         emptyCart.innerHTML = "Your cart is empty";         
+    }
+
+    if(eggsQty.innerHTML == 0 ){
+        eggsDiv.style.display = "none";
+    }
+    if(pancakesQty.innerHTML == 0 ){
+        pancakesDiv.style.display = "none";
+    }
+    if(biscuitQty.innerHTML == 0 ){
+        biscuitDiv.style.display = "none";
+    }
+    if(burgerQty.innerHTML == 0 ){
+        burgerDiv.style.display = "none";
+    }
+    if(steakQty.innerHTML == 0 ){
+        steakDiv.style.display = "none";
+    }
+    if(salmonQty.innerHTML == 0 ){
+        salmonDiv.style.display = "none";
+    }
+    if(cakeQty.innerHTML == 0 ){
+        cakeDiv.style.display = "none";
+    }
+    if(macaroonsQty.innerHTML == 0 ){
+        macaroonsDiv.style.display = "none";
+    }
+
+    netPriceDiv.innerHTML = netPrice.toFixed(2);
+    taxesDiv.innerHTML = taxes;
+    totalPriceDiv.innerHTML = totalPrice;
+
+});
 
 cartIcon.addEventListener("click", function(){    
     cartQty.style.display = "none";
@@ -204,7 +274,7 @@ cartIcon.addEventListener("click", function(){
     foodTitle[2].style.display = "none";
     foodCategory.style.display = "none";
     restaurantPic.style.display = "none";
-    buyDiv.style.display = "block";
+    buyDiv.style.display = "fixed";
 
     if(cartCount == 0){
          emptyCart.innerHTML = "Your cart is empty";         
@@ -259,6 +329,12 @@ houseIcon.addEventListener("click", function(){
     cakeDiv.style.display = "flex";
     macaroonsDiv.style.display = "flex";
     buyDiv.style.display = "none";
+
+    if(cartCount > 0){
+        checkOutDiv.style.display = "block";    
+    } else {
+        checkOutDiv.style.display = "none";
+    }
   
 
     netPriceDiv.innerHTML = netPrice.toFixed(2);
