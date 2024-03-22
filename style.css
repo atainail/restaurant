@@ -144,10 +144,26 @@ header {
 
 
 .breakfast, .dinner, .dessert {
-    flex: auto;
-
-    margin: auto;
     display: flex;
+    flex: auto;
+    margin: auto;
+    
+}
+
+.breakfast-category {
+    /* background-color: white; */
+    
+}
+
+.breakfast-category, .dinner-category, .dessert-category {
+    position: absolute;
+    margin-top: 3em;
+    margin-left: .8em;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 1.3em;
+    display: none;
+    opacity: 100%;
 }
 
 .breakfast img, .dinner img, .dessert img {
@@ -165,6 +181,7 @@ header {
 .breakfast img:hover, .dinner img:hover, .dessert img:hover {
     opacity: .5;
     cursor: pointer;
+    /* background-color: white; */
 }
 
 /* .breakfast img:hover + span, .dinner img:hover + span, .dessert img:hover + span{
@@ -264,6 +281,23 @@ span:hover {
 .totals div {
     margin-bottom: 1.2em;
 }
+
+.buy-now {
+    margin: auto;
+    margin-top: 2em;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    font-family: helvetica;
+    font-weight: 900;
+    background-color: rgb(72, 69, 204);
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+}
+
+
 
 
 

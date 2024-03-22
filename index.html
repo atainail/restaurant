@@ -18,7 +18,9 @@
     <header>
         <navbar>
             <div class="menu">
-                <div class="bar"><i class="bi bi-list"></i></div>
+                <div class="bar">
+                    <!-- <i class="bi bi-list"></i> -->
+                </div>
                 <div class="restaurant-name">
                     The Everything Restaurant
                 </div>
@@ -41,9 +43,9 @@
             </div>
 
             <div class="food-category">
-                <div class="breakfast"> <span class="category">Breakfast </span><img src="breakfast.jpg" alt=""> </div>
-                <div class="dinner"> <span class="category">Dinner </span><img src="dinner.jpg" alt=""> </div>
-                <div class="dessert"> <span class="category">Dessert </span> <img src="dessert.jpg" alt=""> </div>
+                <div class="breakfast"> <span class="breakfast-category">Breakfast </span><img src="breakfast.jpg" alt=""> </div>
+                <div class="dinner"> <span class="dinner-category">Dinner </span><img src="dinner.jpg" alt=""> </div>
+                <div class="dessert"> <span class="dessert-category">Dessert </span> <img src="dessert.jpg" alt=""> </div>
             </div>
 
             
@@ -60,9 +62,11 @@
                 <div class="food-price"> 
                     $3.99
                     <div class="food-qty"> 
-                        <i class="bi bi-plus-circle eggs-plus"></i>
-                        <span class="eggs-qty">0</span>
+                        
                         <i class="bi bi-dash-circle eggs-minus"></i>
+                        <span class="eggs-qty">0</span>
+                        <i class="bi bi-plus-circle eggs-plus"></i>
+
                     </div>
                 </div>              
             </div> 
@@ -77,9 +81,11 @@
                 <div class="food-price"> 
                     $5.99
                     <div class="food-qty"> 
-                        <i class="bi bi-plus-circle pancakes-plus"></i>
-                        <span class="pancakes-qty">0</span>
+                        
                         <i class="bi bi-dash-circle pancakes-minus"></i>
+                        <span class="pancakes-qty">0</span>
+                        <i class="bi bi-plus-circle pancakes-plus"></i>
+
                     </div>
                 </div>              
             </div> 
@@ -95,9 +101,11 @@
                 <div class="food-price"> 
                     $2.99
                     <div class="food-qty"> 
-                        <i class="bi bi-plus-circle biscuit-plus"></i>
-                        <span class="biscuit-qty">0</span>
+                        
                         <i class="bi bi-dash-circle biscuit-minus"></i>
+                        <span class="biscuit-qty">0</span>
+                        <i class="bi bi-plus-circle biscuit-plus"></i>
+
                     </div>
                 </div>              
             </div> 
@@ -115,9 +123,11 @@
                 <div class="food-price"> 
                     $9.99
                     <div class="food-qty"> 
-                        <i class="bi bi-plus-circle burger-plus"></i>
-                        <span class="burger-qty">0</span>
+                        
                         <i class="bi bi-dash-circle burger-minus"></i>
+                        <span class="burger-qty">0</span>
+                        <i class="bi bi-plus-circle burger-plus"></i>
+
                     </div>
                 </div>              
             </div> 
@@ -132,9 +142,11 @@
                 <div class="food-price"> 
                     $12.99
                     <div class="food-qty"> 
-                        <i class="bi bi-plus-circle steak-plus"></i>
-                        <span class="steak-qty">0</span>
+                        
                         <i class="bi bi-dash-circle steak-minus"></i>
+                        <span class="steak-qty">0</span>
+                        <i class="bi bi-plus-circle steak-plus"></i>
+
                     </div>
                 </div>              
             </div> 
@@ -149,9 +161,11 @@
                 <div class="food-price"> 
                     $15.99
                     <div class="food-qty"> 
-                        <i class="bi bi-plus-circle salmon-plus"></i>
-                        <span class="salmon-qty">0</span>
+                        
                         <i class="bi bi-dash-circle salmon-minus"></i>
+                        <span class="salmon-qty">0</span>
+                        
+                        <i class="bi bi-plus-circle salmon-plus"></i>
                     </div>
                 </div>              
             </div> 
@@ -169,9 +183,11 @@
                 <div class="food-price"> 
                     $7.99
                     <div class="food-qty"> 
-                        <i class="bi bi-plus-circle cake-plus"></i>
-                        <span class="cake-qty">0</span>
+                        
                         <i class="bi bi-dash-circle cake-minus"></i>
+                        <span class="cake-qty">0</span>
+                        <i class="bi bi-plus-circle cake-plus"></i>
+
                     </div>
                 </div>              
             </div> 
@@ -185,14 +201,18 @@
                 <div class="food-price"> 
                     $9.99
                     <div class="food-qty"> 
-                        <i class="bi bi-plus-circle macaroons-plus"></i>
-                        <span class="macaroons-qty">0</span>
+                        
                         <i class="bi bi-dash-circle macaroons-minus"></i>
+                        <span class="macaroons-qty">0</span>
+                        <i class="bi bi-plus-circle macaroons-plus"></i>
+
                     </div>
                 </div>              
             </div> 
 
             <div class="empty-cart"></div>
+
+            
 
             <div class="totals">
                 <div>net price<span class="net-price"></span></div>
@@ -200,7 +220,8 @@
                 <div>total price<span class="total-price"></span></div>     
             </div>
             
-            
+            <div class="buy-now"><span>PAY</span></div>
+
         </div>
         
     </div>
@@ -236,16 +257,7 @@
 
     <script src="script.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
-
-    <!-- <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script> -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
-    <script type="text/javascript" src="index.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
     
 </body>
 </html>

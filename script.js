@@ -1,35 +1,53 @@
 var cartQty = document.querySelector(".cart-qty");
 var cartCount = 0;
 
-cartQty.addEventListener("click", function(){
-
-});
-
-
-
-
 
 
 var breakfastCategory = document.querySelector(".breakfast");
-var breakfastMenu = document.querySelector(".breakfast-menu")
+var breakfastMenu = document.querySelector(".breakfast-menu");
+var breakfastCategoryText = document.querySelector(".breakfast-category");
 
 breakfastCategory.addEventListener("click", function(){
     breakfastMenu.scrollIntoView();
 });
 
+breakfastCategory.addEventListener("mouseover", function(){
+    breakfastCategoryText.style.display = "block";
+});
+breakfastCategory.addEventListener("mouseout", function(){
+    breakfastCategoryText.style.display = "none";
+});
+
 var dinnerCategory = document.querySelector(".dinner");
-var dinnerMenu = document.querySelector(".dinner-menu")
+var dinnerMenu = document.querySelector(".dinner-menu");
+var dinnerCategoryText = document.querySelector(".dinner-category");
 
 dinnerCategory.addEventListener("click", function(){
     dinnerMenu.scrollIntoView();
 });
 
+dinnerCategory.addEventListener("mouseover", function(){
+    dinnerCategoryText.style.display = "block";
+});
+dinnerCategory.addEventListener("mouseout", function(){
+    dinnerCategoryText.style.display = "none";
+});
+
 var dessertCategory = document.querySelector(".dessert");
-var dessertMenu = document.querySelector(".dessert-menu")
+var dessertMenu = document.querySelector(".dessert-menu");
+var dessertCategoryText = document.querySelector(".dessert-category");
 
 dessertCategory.addEventListener("click", function(){
     dessertMenu.scrollIntoView();
 });
+dessertCategory.addEventListener("mouseover", function(){
+    dessertCategoryText.style.display = "block";
+});
+dessertCategory.addEventListener("mouseout", function(){
+    dessertCategoryText.style.display = "none";
+});
+
+
 
 
 
@@ -120,12 +138,6 @@ var macaroonsQty = document.querySelector(".macaroons-qty");
 var macaroonsCount = 0;
 foodChanges(macaroonsPlus, macaroonsMinus, macaroonsCount, macaroonsQty);
 
-// console.log(navigator.cookieEnabled);
-// document.cookie = "name=bob; path=/";
-// console.log(document.cookie);
-
-// localStorage.qty = "dfkdof";
-// console.log(localStorage.qty);
 
 var eggsPrice = 3.99;
 var pancakesPrice = 5.99;
@@ -180,7 +192,7 @@ var foodTitle = document.querySelectorAll(".food-title");
 var foodCategory = document.querySelector(".food-category");
 var restaurantPic = document.querySelector(".restaurant-pic");
 var emptyCart = document.querySelector(".empty-cart");
-
+var buyDiv = document.querySelector(".buy-now");
 
 cartIcon.addEventListener("click", function(){    
     cartQty.style.display = "none";
@@ -192,6 +204,7 @@ cartIcon.addEventListener("click", function(){
     foodTitle[2].style.display = "none";
     foodCategory.style.display = "none";
     restaurantPic.style.display = "none";
+    buyDiv.style.display = "block";
 
     if(cartCount == 0){
          emptyCart.innerHTML = "Your cart is empty";         
@@ -227,79 +240,6 @@ cartIcon.addEventListener("click", function(){
     totalPriceDiv.innerHTML = totalPrice;
 });
 
-
-// $(document).ready(function(){
-//     $(".bi-cart").click(function(){
-//       $(".middle-stuff").load("cart.txt").hide().fadeIn('slow');
-//       $(".totals").fadeIn('slow');
-//     cartIcon.style.display = "none";
-//     houseIcon.style.display = "block";
-//     cartQty.style.display = "none";
-//     totalsDiv.style.display = "block";
-
-
-//     if(eggsQty.innerHTML == 0 ){
-//         eggsDiv.style.display = "none";
-//         $(".eggs-item").hide();
-//     }
-
-
-
-//     if(pancakesQty.innerHTML == 0 ){
-//         pancakesDiv.style.display = "none";
-//         $(".pancakes-item").hide();
-//     }
-//     if(biscuitQty.innerHTML == 0 ){
-//         biscuitDiv.style.display = "none";
-//         $(".biscuit-item").hide();
-//     }
-//     if(burgerQty.innerHTML == 0 ){
-//         burgerDiv.style.display = "none";
-//         $(".burger-item").hide();
-//     }
-//     if(steakQty.innerHTML == 0 ){
-//         steakDiv.style.display = "none";
-//         $(".steak-item").hide();
-//     }
-//     if(salmonQty.innerHTML == 0 ){
-//         salmonDiv.style.display = "none";
-//         $(".salmon-item").hide();
-//     }
-//     if(cakeQty.innerHTML == 0 ){
-//         cakeDiv.style.display = "none";
-//         $(".cake-item").hide();
-//     }
-//     if(macaroonsQty.innerHTML == 0 ){
-//         macaroonsDiv.style.display = "none";
-//         $(".macaroons-item").hide();
-//     }
-
-//     netPriceDiv.innerHTML = netPrice.toFixed(2);
-//     taxesDiv.innerHTML = taxes;
-//     totalPriceDiv.innerHTML = totalPrice;
-
-//     totalsDiv.style.display = "block";
-    
-//     console.log(`egg qty is ${eggsQty.innerHTML}`)
-
-//     });
-// });
-
-
-
-$(document).ready(function(){
-    $(".bi-house-door").click(function(){
-      $(".middle-stuff").load("index.txt").hide().fadeIn('slow');
-
-    cartIcon.style.display = "block";
-    cartQty.style.display = "block";
-    houseIcon.style.display = "none";
-    totalsDiv.style.display = "none";
-    
-
-    });
-});
-
 houseIcon.addEventListener("click", function(){    
     cartQty.style.display = "block";
     totalsDiv.style.display = "none";
@@ -310,32 +250,15 @@ houseIcon.addEventListener("click", function(){
     foodTitle[2].style.display = "block";
     foodCategory.style.display = "flex";
     restaurantPic.style.display = "block";
-
-    
-
-    
-        eggsDiv.style.display = "flex";
-    
-    
-        pancakesDiv.style.display = "flex";
-    
-    
-        biscuitDiv.style.display = "flex";
-    
-    
-        burgerDiv.style.display = "flex";
-    
-    
-        steakDiv.style.display = "flex";
-    
-
-        salmonDiv.style.display = "flex";
-    
-    
-        cakeDiv.style.display = "flex";
-  
-  
-        macaroonsDiv.style.display = "flex";
+    eggsDiv.style.display = "flex";
+    pancakesDiv.style.display = "flex";
+    biscuitDiv.style.display = "flex";
+    burgerDiv.style.display = "flex";
+    steakDiv.style.display = "flex";
+    salmonDiv.style.display = "flex";
+    cakeDiv.style.display = "flex";
+    macaroonsDiv.style.display = "flex";
+    buyDiv.style.display = "none";
   
 
     netPriceDiv.innerHTML = netPrice.toFixed(2);
